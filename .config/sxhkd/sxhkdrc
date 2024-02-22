@@ -33,14 +33,11 @@ super + space
 super + n
 	bash ~/bin/rofi-network-manager
 
-super + {c, b}
-	{code, brave-browser}
-
 super + f
 	wmctrl -a Thunar || thunar
 
-super + {s, t, m, g}
-	flatpak run { org.signal.Signal, org.telegram.desktop, com.spotify.Client, com.valvesoftware.Steam }
+super + {v, c, b, s, t, m, g}
+	flatpak run {io.neovim.nvim, com.visualstudio.code, com.brave.Browser, org.signal.Signal, org.telegram.desktop, com.spotify.Client, com.valvesoftware.Steam }
 
 ######################
 ## windows keybindings
