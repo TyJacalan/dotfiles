@@ -28,7 +28,8 @@ window:
   decorations: none
   startup_mode: Windowed
   dynamic_title: true
-
+  opacity: 0.8
+  
 ## scrolling
   history: 10000
   multiplier: 3
