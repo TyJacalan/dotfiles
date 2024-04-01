@@ -7,36 +7,78 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
+  -- Mason: package manager for lsp
   use {
-	  'nvim-telescope/telescope.nvim', tag = '0.1.5',
-	  -- or                            , branch = '0.1.x',
-	  requires = { {'nvim-lua/plenary.nvim'} }
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    "neovim/nvim-lspconfig",
   }
 
-  use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
-  use('mbbill/undotree')
-  use('tpope/vim-fugitive')
+  -- LSP Zero: lsp helper 
+  -- Nvim cmp: auto completion  
   use {
-	  "williamboman/mason.nvim",
-	  "williamboman/mason-lspconfig.nvim",
-	  "neovim/nvim-lspconfig",
-  }
-  use {
-	  'VonHeikemen/lsp-zero.nvim',
-	  branch = 'v3.x',
+	  "VonHeikemen/lsp-zero.nvim",
+	  branch = "v1.x",
 	  requires = {
-		  --- Uncomment the two plugins below if you want to manage the language servers from neovim
-		  -- {'williamboman/mason.nvim'},
-		  -- {'williamboman/mason-lspconfig.nvim'},
-
 		  -- LSP Support
-		  {'neovim/nvim-lspconfig'},
+		  {"neovim/nvim-lspconfig"},
+		  {"williamboman/mason.nvim"},
+		  {"williamboman/mason-lspconfig.nvim"},
+
 		  -- Autocompletion
-		  {'hrsh7th/nvim-cmp'},
-		  {'hrsh7th/cmp-nvim-lsp'},
-		  {'L3MON4D3/LuaSnip'},
+		  {"hrsh7th/nvim-cmp"},
+		  {"hrsh7th/cmp-buffer"},
+		  {"hrsh7th/cmp-path"},
+		  {"saadparwaiz1/cmp_luasnip"},
+		  {"hrsh7th/cmp-nvim-lsp"},
+		  {"hrsh7th/cmp-nvim-lua"},
+
+		  -- Snippets
+		  {"L3MON4D3/LuaSnip"},
+		  {"rafamadriz/friendly-snippets"},
 	  }
   }
- 
- end)
+  
+  -- Color Scheme
+  use 'shaunsingh/nord.nvim'
+  
+  -- Treesitter: syntax highlighting
+  use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
+  -- Telescope: fuzzy finder
+  use {
+    'nvim-telescope/telescope.nvim', tag = '0.1.5',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
+  
+  -- Undo Tree: version control
+  use('mbbill/undotree')
+  
+  -- Harpoon: quick file navigation
+  use('theprimeagen/harpoon')
+  
+  -- Fugitive: git manager
+  use('tpope/vim-fugitive')
+  
+  -- Git Gutter: git version control visual helper
+  use 'airblade/vim-gitgutter'
+  
+  -- Alpha: home page
+  use { 
+    'goolord/alpha-nvim',
+    requires = { 'nvim-tree/nvim-web-devicons' },
+    config = function ()
+      require 'alpha'.setup(require'alpha.themes.startify'.config)
+    end
+  }
+
+  -- Lualine: status line
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires =  { 'nvim-tree/nvim-web-devicons', opt = true }
+  }
+
+  -- Visual-Multi: multi-cursor mode
+  use('mg979/vim-visual-multi')
+
+ end)
