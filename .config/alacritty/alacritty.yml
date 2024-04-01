@@ -96,6 +96,9 @@ colors:
 ## Live config reload
 live_config_reload: true
 
+key_bindings:
+  - { key: Return, mods: Super|Shift, action: SpawnNewInstance }
+
 ## Shell
 #shell:
 #  program: /bin/zsh
