@@ -4,11 +4,11 @@
 
 # logout, shutdown, reboot
 super + x
-	~/bin/power
+	~/.config/rofi/powermenu.sh
 	
 # help with shortcuts
 super + h
-	~/bin/rofi-key
+	~/.local/bin/rofi-key
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -27,7 +27,7 @@ super + Return
 
 # rofi launchers
 super + space
-   	rofi  drun -show drun -line spadding 4 -hide-scrollbar -show-icons 
+  ./.config/rofi/launcher.sh
 	
 # rofi network manager (will not work unless on wifi)	
 super + n
@@ -42,9 +42,6 @@ super + {v, c, b, s, t, m, g}
 ######################
 ## windows keybindings
 #######################
-
-super + shift + q
-	bspc quit
 
 super + q
 	bspc node -c
