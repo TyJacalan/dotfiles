@@ -38,10 +38,13 @@ return require('packer').startup(function(use)
 		  {"rafamadriz/friendly-snippets"},
 	  }
   }
-  
+
+  -- LSP tooling
+  use 'nvimtools/none-ls.nvim'
+
   -- Color Scheme
   use 'shaunsingh/nord.nvim'
-  
+
   -- Treesitter: syntax highlighting
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
@@ -50,19 +53,19 @@ return require('packer').startup(function(use)
     'nvim-telescope/telescope.nvim', tag = '0.1.5',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
-  
+
   -- Undo Tree: version control
   use('mbbill/undotree')
-  
+
   -- Harpoon: quick file navigation
   use('theprimeagen/harpoon')
-  
+
   -- Fugitive: git manager
   use('tpope/vim-fugitive')
   
   -- Git Gutter: git version control visual helper
   use 'airblade/vim-gitgutter'
-  
+
   -- Alpha: home page
   use { 
     'goolord/alpha-nvim',
@@ -77,8 +80,4 @@ return require('packer').startup(function(use)
     'nvim-lualine/lualine.nvim',
     requires =  { 'nvim-tree/nvim-web-devicons', opt = true }
   }
-
-  -- Visual-Multi: multi-cursor mode
-  use('mg979/vim-visual-multi')
-
  end)
