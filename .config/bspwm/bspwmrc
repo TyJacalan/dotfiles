@@ -9,10 +9,9 @@ dunst &
 polybar &
 picom --config ~/.config/picom/picom.conf &
 feh --bg-fill --randomize ~/Wallpapers/* &
-pg_ctl start &
 
 # window styles
-bspc monitor -d home web dev txt vid mus soc avion asap
+bspc monitor -d home web dev txt vid mus soc avion work
 
 bspc config border_width			4
 bspc config window_gap				10

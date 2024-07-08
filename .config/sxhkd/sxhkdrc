@@ -28,6 +28,9 @@ super + Return
 # rofi launchers
 super + space
   ./.config/rofi/launcher.sh
+
+super + b
+  brave-browser
 	
 # rofi network manager (will not work unless on wifi)	
 super + n
@@ -36,8 +39,8 @@ super + n
 super + f
 	wmctrl -a Thunar || thunar
 
-super + {v, c, b, s, t, m, g}
-	flatpak run {io.neovim.nvim, com.visualstudio.code, com.brave.Browser, org.signal.Signal, org.telegram.desktop, com.spotify.Client, com.valvesoftware.Steam }
+super + {v, c, s, t, m, g}
+	flatpak run {io.neovim.nvim, com.visualstudio.code, org.signal.Signal, org.telegram.desktop, com.spotify.Client, com.valvesoftware.Steam }
 
 ######################
 ## windows keybindings
@@ -73,10 +76,10 @@ super + ctrl + {Left,Down,Up,Right}
 
 # Change volume, chunky
 super + shift + k
-    ~/bin/changevolume up
+  pamixer --increase 5
     
 super + shift + j
-	~/bin/changevolume down
+	pamixer --decrease 5
 	
 super + shift + m
 	~/bin/changevolume mute
@@ -86,9 +89,4 @@ super + shift + m
 ###################
 
 super + ctrl + 4
-	scrot -s -e 'mv $f ~/Screenshots'; \
-	notify-send 'Scrot' 'Selected image to ~/Screenshots'
-
-super + ctrl + 5
-	scrot -e 'mv $f ~/Screenshots'; \
-	notify-send 'Scrot' 'Image saved to ~/Screenshots'
+  flameshot
