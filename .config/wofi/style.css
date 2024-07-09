@@ -1,0 +1,53 @@
+* {
+  font-family:
+    Meslo LGM,
+    sans-serif;
+}
+
+window {
+  background-color: rgba(46, 52, 64, 0.75);
+  border-radius: 2rem;
+}
+
+#input {
+  padding: 0.5rem 1rem;
+  margin: 5px;
+  border-radius: 5rem;
+  border: none;
+  background-color: transparent;
+  color: white;
+}
+
+#outer-box {
+  margin: 5px;
+  padding: 20px;
+}
+
+#inner-box {
+  margin-top: 5px;
+}
+
+#text {
+  padding: 5px;
+  color: white;
+}
+
+#entry {
+  margin-top: 5px;
+  border-radius: 1rem;
+}
+
+#entry:nth-child(even) {
+  background-color: rgba(46, 52, 64, 0.5);
+}
+
+#entry:selected {
+  background-color: transparent;
+  border: 2px solid #a5abb6;
+  border-radius: 1rem;
+  outline: none;
+}
+
+#expander-box {
+  background-color: transparent;
+}
