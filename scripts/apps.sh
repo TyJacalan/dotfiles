@@ -29,7 +29,8 @@ yay -S firefox --noconfirm
 # Entertainment
 yay -S spotify --noconfirm
 
-# Screenshotting Tool
+# Screenshotting Tool and dependencies
+yay -S qt5-base qt5-tools qt5-svg xdg-desktop-portal xdg-desktop-portal-wlr grim --noconfirm
 yay -S flameshot --noconfirm
 
 # Photo Editing
