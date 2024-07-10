@@ -1,7 +1,22 @@
+# Dependencies
+sudo pacman -S ninja gcc wayland-protocols libjpeg-turbo libwebp pango cairo pkgconf cmake libglvnd wayland xdg-user-dirs python-requests --noconfirm
+
 # Navigation bar
-yay -S waybar
+yay -S hyprpaper --noconfirm
 yay -S pavucontrol --noconfirm
-yay -S wlogout
+yay -S wlogout --noconfirm
+yay -S waybar --noconfirm
+
+# Neovim-related tools
+yay -S xclip --noconfirm
+yay -S fd --noconfirm
+yay -S ripgrep --noconfirm
+# For luasnip
+sudo pacman -S luajit --noconfirm
+yay -S luarocks --noconfirm
+sudo luarocks install jsregexp
+# For tresitter
+npm install -g tree-sitter-cli
 
 # Programming Tools
 yay -S neovim --noconfirm
