@@ -1,0 +1,11 @@
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+
+[font.bold]
+style = "Bold"
+
+[font.italic]
+style = "Italic"
+
+[font.bold_italic]
+style = "Bold Italic"

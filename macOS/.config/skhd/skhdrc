@@ -1,0 +1,5 @@
+cmd - return : open -n /Applications/Alacritty.app/
+cmd - b : open /Applications/Arc.app/
+cmd - i :open /Applications/IntelliJ IDEA.app/
+cmd - n : open /Applications/Notion.app/
+cmd - m : open /Applications/Spotify.app/
